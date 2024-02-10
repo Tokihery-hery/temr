@@ -1,0 +1,153 @@
+.checkout-form {
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  padding: 50px 20px 20px;
+  border-radius: 5px;
+  text-align: right;
+}
+
+.AppWrapper {
+  width: 500px;
+  height: 400px;
+  position: relative;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale3D(0.95, 0.95, 0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale3D(1, 1, 1);
+  }
+}
+
+.Form {
+  animation: fade 200ms ease-out;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 0.5em rgba(0,0,0,0.3);
+}
+
+.FormGroup {
+  margin: 0 0 20px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+}
+
+.FormRow {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 15px;
+  border-top: 1px solid #ddd;
+}
+
+.FormRow:first-child {
+  border-top: none;
+}
+
+.FormRowLabel {
+  width: 15%;
+  font-weight: 600;
+  min-width: 70px;
+  padding: 11px 0;
+  color: rgba(26,26,26,.9);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@keyframes void-animation-out {
+  0%,
+  to {
+    opacity: 1;
+  }
+}
+.FormRowInput:-webkit-autofill {
+  -webkit-text-fill-color: rgba(26,26,26,.9);
+  /* Hack to hide the default webkit autofill */
+  transition: background-color 100000000s;
+  animation: 1ms void-animation-out;
+}
+
+.FormRowInput {
+  font-size: 16px;
+  width: 100%;
+  padding: 11px 15px 11px 0;
+  color: rgba(26,26,26,.9);
+  border: 0;
+  background-color: transparent;
+  animation: 1ms void-animation-out;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.FormRowInput::placeholder {
+  color: #cdcdcd;
+}
+
+.StripeElement--webkit-autofill {
+  background: transparent !important;
+}
+
+.StripeElement {
+  width: 100%;
+  padding: 11px 15px 11px 0;
+}
+
+.SubmitButton {
+  margin: 0 0 0 auto;
+}
+
+.SubmitButton.SubmitButton--error {
+  transform: translateY(15px);
+}
+.SubmitButton.SubmitButton--error:active {
+  transform: scale(0.99) translateY(15px);
+}
+
+.SubmitButton:disabled {
+  opacity: 0.5;
+  cursor: default;
+  background-color: #ddd;
+  box-shadow: none;
+}
+
+.ErrorMessage {
+  color: red;
+  display: flex;
+  justify-content: center;
+  padding: 0 15px;
+  font-size: 13px;
+  margin-top: 0px;
+  width: 100%;
+  transform: translateY(-15px);
+  opacity: 0;
+  animation: fade 150ms ease-out;
+  animation-delay: 50ms;
+  animation-fill-mode: forwards;
+  will-change: opacity, transform;
+}
+
+.result {
+  margin-top: 50px;
+  text-align: center;
+  animation: fade 200ms ease-out;
+}
+
+.total {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: right;
+}
