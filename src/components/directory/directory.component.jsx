@@ -16,7 +16,7 @@ const Directory = ({ sections }) => (
 	<Container fluid>
     <Row className='directory-menu'>
 		{sections.map(({ id, ...otherSectionProps }) => (
-			<Col xs={id == 4 || id == 5 ? 6 : 4} key={id}>
+			<Col xs={id === 4 || id === 5 ? 6 : 4} key={id}>
 				<MenuItem {...otherSectionProps} />
 			</Col>
 		))}

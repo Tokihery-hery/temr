@@ -9,6 +9,9 @@ import { store, persistor } from './redux/store';
 import './index.css';
 import App from './App';
 
+console.log("this process");
+console.log(process);
+
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>

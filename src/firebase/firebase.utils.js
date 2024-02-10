@@ -3,13 +3,13 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const config = {
-  apiKey: "AIzaSyDmRpiWlCLVWvxpKtrxlRYw7Dadoz99LuE",
-  authDomain: "crwn-react-6b805.firebaseapp.com",
-  databaseURL: "https://crwn-react-6b805.firebaseio.com",
-  projectId: "crwn-react-6b805",
-  storageBucket: "crwn-react-6b805.appspot.com",
-  messagingSenderId: "834110943475",
-  appId: "1:834110943475:web:07f4c118c3aa1b17954786"
+  apiKey: process.env.APIKEY,
+  authDomain: process.env.AUTHDOMAINS,
+  databaseURL: process.env.DATABASEURL,
+  projectId: process.env.PROJECTID,
+  storageBucket: process.env.STORAGEBUCKET,
+  messagingSenderId: process.env.MESSAGESENDER,
+  appId: process.env.APPID
 };
 
 firebase.initializeApp(config);
